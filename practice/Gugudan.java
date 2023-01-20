@@ -2,7 +2,7 @@ package practice;
 
 import java.util.Scanner;
 
-public class Gugudan {	//수정중
+public class Gugudan {	
 	
 	public static void main(String[] args) {
 
@@ -22,24 +22,27 @@ public class Gugudan {	//수정중
 			return;
 		}*/
 		
-		for(int i=2; i<=9; i+=col) {
+		for (int i=2; i<=9; i+=col) {
 			for(int j=1; j<=9; j++) {
-				for(int k=0; k<col; k++) {
-				
-					if(10 <= i+k) {						//내가 정한 마지막코드까지만 (9단까지만...)
-						System.out.println("\n");
+				for(int k=0; k<col; k++) {	//column수만큼 나란히 출력
+					
+					if ((i+k)>9) {	//i+k값이 9보다 크면 루프중단
 						break;
 					}
-					
-					System.out.printf("%d * %d = %2d", (i+k), j, (i+k)*j);
-				
-					if (k < col-1) System.out.println("\t");
-					else		 	System.out.println("\n");	
+					System.out.printf("%d * %d = %2d\t",(i+k),j,(i+k)*j);
 				}
+				System.out.println();
 			}
+			System.out.println();
+		}
+				
+/*					if (k < col-1) System.out.println("\t");
+					else		 	System.out.println("\n");	*/
+				
+			
 		
 		System.out.println("---------------");
 
-		}
+		
 	}
 }
